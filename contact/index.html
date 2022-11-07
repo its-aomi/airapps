@@ -6,14 +6,23 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<title>Contact &#8211; Air Apps</title>
 <script>
-function validateForm() {
-  let x = document.forms["Air Apps Contact"]["entry.2005620554"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
+const form = document.querySelector('form');
+const thankYouMessage = document.querySelector('#thank-you-message');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  thankYouMessage.classList.add('show');
+  setTimeout(() => form.submit(), 2000);
+});
 </script>
+<style>
+	#thank-you-message {
+  display: none;
+}
+
+#thank-you-message.show {
+  display: block;
+}
+</style>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap"></noscript>
@@ -581,7 +590,9 @@ body::-webkit-scrollbar-thumb
 
 
 
-
+<p id="thank-you-message">
+   Thank you for contacting us. We will be in touch with you very soon.
+ </p>
 <form class="elementor-form" name="Air Apps Contact" action="https://docs.google.com/forms/d/e/1FAIpQLSfI8P7EhqzQmr2EFamjhwZSjBDawjBf478LVFbgh5w1gH5K2A/formResponse" enctype="text/plain" target="hidden_iframe">
 			<input type="hidden" name="post_id" value="130">
 			<input type="hidden" name="form_id" value="d0e6a8e">
@@ -2996,11 +3007,11 @@ var ekit_config = {"ajaxurl":"https:\/\/its-aomi.github.io\/airapps\/wp-admin\/a
 if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
 images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
 if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://its-aomi.github.io/airapps/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script>
-<script type="text/javascript">
+<!--<script type="text/javascript">
             function showMessage() {
                 alert("Thank you for your message. We'll be in touch soon!");
 }
-</script>
+</script>-->
 <!--
 <script>
         document.getElementById("mainBtn").addEventListener("click", redirectFunction);
